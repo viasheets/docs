@@ -3,69 +3,78 @@ title: Introduction
 description: "Welcome to Viasheets documentation!"
 ---
 
-<img
-  className="block dark:hidden"
-  src="/images/hero-light.svg"
-  alt="Hero Light"
-/>
-<img
-  className="hidden dark:block"
-  src="/images/hero-dark.svg"
-  alt="Hero Dark"
-/>
+Viasheets lets you connect data sources directly to Google Sheets so that you and your team can get live updates immediately!
 
-## Setting up
-
-The first step to world-class documentation is setting up your editing environnments.
-
-<CardGroup cols={2}>
+<CardGroup cols={1}>
   <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
+    title="Quickstart"
+    icon="rocket"
+    href="/quickstart"
   >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
+    Guide to installing and running Viasheets
   </Card>
 </CardGroup>
 
-## Make it yours
+## Sources
+Sources are the channels we use to pull data from, whether it's your bank data, Stripe, Employment systems, Google Anaytics, Instagram, etc. A source is any system that we're connected to that you can pull data directly from.
 
-Update your docs to your brand and add valuable content for the best user conversion.
+Sources are configured from the Viasheets [dashboard](https://dash.viasheets.com/dashboard) meaning that they can be added or deleted at any time.
 
 <CardGroup cols={2}>
   <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
+    title="Connect a Source"
+    icon="plus"
+    href="/sources/connect"
+  >
+    Connecting Sources
+  </Card>
+  <Card
+    title="Delete a Source"
+    icon="trash"
+    href="/sources/delete"
+  >
+    Connecting Sources
+  </Card>
+</CardGroup>
+
+## Queries
+
+Queries serve as the foundation of Viasheets, allowing you to extract data directly into Google Sheets. A **query** empowers you to choose the specific data you wish to extract from a source and seamlessly integrate it into a spreadsheet.
+
+After you have crafted and executed a query, you will have the opportunity to save it, allowing you to rerun the query at a later time.
+
+<CardGroup cols={2}>
+  <Card
+    title="Create a Query"
+    icon="table"
+    href="/query/create"
   >
     Customize your docs to your company's colors and brands
   </Card>
   <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
+    title="View & Run Saved Queries"
+    icon="person-running"
+    href="/query/view-and-run"
   >
     Automatically generate endpoints from an OpenAPI spec
   </Card>
-  <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
-  >
-    Build interactive features and designs to guide your users
-  </Card>
-  <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/showcase"
-  >
-    Check out our showcase of our favorite documentation
-  </Card>
 </CardGroup>
+
+## Templates
+Templates are pre-designed spreadsheets that enable you to quickly initiate your work. Following the connection of your sources, configure the queries and execute them in the designated sections within our templates. Upon completion, you will gain access to the evaluations embedded within each template.
+
+## FAQ
+<AccordionGroup>
+  <Accordion title="Where is my data stored?">
+  We **do not** retain any of your data. Upon connecting to a source, we refrain from extracting any data from that source.
+
+  Instead, when you opt to import data into a spreadsheet, we save a query that informs us of your desired data retrieval. After your query executes, we incorporate the data directly into your spreadsheet, without retaining any information within our systems.
+  </Accordion>
+  <Accordion title="How can I establish a connection to a source that is not listed?">
+  Have a source that we don't have yet? Send us an email at [hello@viasheets.com](mailto:hello@viasheets.com) and we'll add it in for you :)
+  </Accordion>
+  <Accordion title="How do you prevent data from being added twice to a spreadsheet?">
+  At Viasheets, we employ cursors, which serve as our internal references to the IDs extracted from your last data row. We utilize these cursors as reference points to ensure that no duplicate data is appended to your spreadsheet.
+  </Accordion>
+</AccordionGroup>
+
