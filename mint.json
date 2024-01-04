@@ -53,6 +53,20 @@
         "quickstart",
         "development"
       ]
+    },
+    {
+      "group": "Sources",
+      "pages": [
+        "sources/connect",
+        "sources/delete"
+      ]
+    },
+    {
+      "group": "Queries",
+      "pages": [
+        "query/create",
+        "query/view-and-run"
+      ]
     }
   ]
 }
