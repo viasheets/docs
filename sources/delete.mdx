@@ -1,21 +1,24 @@
 ---
-title: 'Connecting a Source'
-description: 'How to connect a source to Viasheets'
+title: 'Delete a Source'
+description: 'How to delete a source on Viasheets'
 ---
 
-## What is a source?
-A **source** refers to a connection with a service that you can establish to import data into Google Sheets, including banks (via Plaid), Google Analytics, HubSpot, Stripe, and more.
+Removing a source on Viasheets is a straightforward process that can be completed directly from the dashboard. Since Viasheets does not retain any source data on our servers or database, the source deletion procedure is uncomplicated, ensuring that your data remains secure unless accessed through your own Google Sheet, where the data resides.
 
-## How do I connect a source?
+## Steps
+1. Navigate to the [Viasheets Dashboard](https://dash.viasheets.com/dashboard)
+2. Locate and click on the Connect button (the wording may vary depending on the source).
+3. If multiple sources are connected, you will find an option to delete the desired source. If an API key is required, you can simply replace it with a random string for deletion.
 
-To connect to a source, you need to follow a few steps. Once the connection is established, you can import data from this source into a spreadsheet.
 
-1. Sign up for Viasheets.
-2. Create an Organization.
-3. Click the "Connect" option for the source you wish to establish a connection with.
-4. Follow the prompts specific to the source you want to connect to.
+### Example: Deleting a Bank Account Source
+1. Navigate to the [Viasheets Dashboard](https://dash.viasheets.com/dashboard)
+<Frame>
+  <img src="/images/viasheets-dashboard.png" style={{ borderRadius: '0.5rem' }} />
+</Frame>
 
-## Connecting your bank accounts
-
-Follow our [quick install guide](/quick-install) to set up your bank account.
-
+2. Click on the **Edit Connections** button
+3. Find the Source you want to delete, and click the "Delete Connection" button
+<Frame>
+  <img src="/images/viasheets-delete-source.png" style={{ borderRadius: '0.5rem' }} />
+</Frame>
