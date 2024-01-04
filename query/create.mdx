@@ -18,6 +18,16 @@ After you have crafted and executed a query, you will have the opportunity to sa
 8. Click on "Get Source Data."
 9. Select the fields you want to pull into the Google Sheet.
 10. Select a cell on your Google Sheet where you want to pull the data into. 
-   - Please note cell data that is within the number of rows and columns of the data that you pull in will be written over with the data you're pulling in.
+<Note>
+   Please note cell data that is within the number of rows and columns of the data that you pull in will be written over with the data you're pulling in.
+</Note>
 11. Click "Add Source Data to Spreadsheet" to pull the data into the spreadsheet. Before this runs, you'll be asked for confirmation to pull data into the starting cell. If you don't want to pull in the data yet, click "Create Query."
 
+## FAQ
+<AccordionGroup>
+  <Accordion title="What's the difference between 'Add Source Data to Spreadsheet' and 'Create Query?'">
+  Clicking **Add Source Data to Spreadsheet** will add in the data from the Source & Source API directly into the Google Sheet. In some cases (I.e. Plaid Transactions), we store a cursor which keeps tracks of the rows we've already added so that there are no duplicates. By clicking this, you pull data into the spreadsheet and we store a cursor for future use. Once you click on "Create Query", the next time you run the query, it will only add rows that we have not added before.
+
+  If you click on **Create Query** before clicking **Add Source Data to Spreadsheet** we do not store the cursor and so the next time you pull in data from a source, it will add all transactions.
+  </Accordion>
+</AccordionGroup>
